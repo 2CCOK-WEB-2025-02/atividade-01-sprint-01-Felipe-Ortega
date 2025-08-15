@@ -9,5 +9,4 @@ public class Sprint1Nota1Application {
 	public static void main(String[] args) {
 		SpringApplication.run(Sprint1Nota1Application.class, args);
 	}
-
 }

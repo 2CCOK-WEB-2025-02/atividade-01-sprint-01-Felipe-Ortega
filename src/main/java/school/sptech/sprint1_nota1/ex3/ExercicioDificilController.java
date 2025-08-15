@@ -8,7 +8,12 @@ import org.springframework.web.bind.annotation.RestController;
 public class ExercicioDificilController {
 
     @GetMapping("/ex-03/{n}")
-    public ExercicioDificilResponse exercicioDificil(int n) {
-        return null;
+    public ExercicioDificilResponse exercicioDificil(@PathVariable int n) {
+        ExercicioDificilResponse exerc = new ExercicioDificilResponse();
+        exerc.EnesimoTermo(exerc.calcularLista(n), n);
+        int soma = exerc.calcularSoma(exerc.calcularLista(n));
+        exerc.setSoma(soma);
+
+        return exerc;
     }
 }
